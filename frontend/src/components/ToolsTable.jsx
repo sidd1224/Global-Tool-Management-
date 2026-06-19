@@ -1,5 +1,4 @@
 function ToolsTable({ search, tools }) {
-
   const statusClasses = {
     DEPLOYED: "status-deployed",
     DRAFT: "status-draft",
@@ -21,22 +20,16 @@ function ToolsTable({ search, tools }) {
         {tools?.map((tool) => (
           <tr key={tool.id}>
             <td>
-              {tool.name}
-              <br />
-              {tool.description}
+              <div className="tool-name">{tool.name}</div>
+
+              <div className="tool-description">{tool.description}</div>
             </td>
             <td>
               <span className="sector-badge">{tool.sectors}</span>
             </td>
             <td>{tool.category}</td>
             <td>
-              <span
-                className={
-                 statusClasses[tool.status]
-                }
-              >
-                {tool.status}
-              </span>
+              <span className={statusClasses[tool.status]}>{tool.status}</span>
             </td>
           </tr>
         ))}

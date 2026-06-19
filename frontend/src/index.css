@@ -154,7 +154,17 @@ body {
   border-radius: 16px;
   overflow: hidden;
 }
+.tool-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
 
+.tool-description {
+  font-size: 13px;
+  color: #7c8aa5;
+  margin-top: 6px;
+}
 .tools-table thead {
   background: rgba(255, 255, 255, 0.03);
 }
