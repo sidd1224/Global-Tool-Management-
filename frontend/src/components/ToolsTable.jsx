@@ -26,7 +26,7 @@ function ToolsTable({ search, tools }) {
               <div className="tool-description">{tool.description}</div>
             </td>
             <td>
-              <span className="sector-badge">{tool.sectors}</span>
+              <span className="sector-badge">{tool.sector_names?.[0]}</span>
             </td>
             <td>{tool.category}</td>
             <td>{tool.type}</td>
