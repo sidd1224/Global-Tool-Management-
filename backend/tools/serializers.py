@@ -10,6 +10,12 @@ class ToolSerializer(serializers.ModelSerializer):
         many=True
     )
 
+    sector_names = serializers.StringRelatedField(
+        source="sectors",
+        many=True,
+        read_only=True
+    )
+
     class Meta:
         model = Tool
         fields = "__all__"
