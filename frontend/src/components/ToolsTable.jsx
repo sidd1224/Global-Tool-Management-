@@ -1,0 +1,48 @@
+function ToolsTable({ search, tools }) {
+
+  const statusClasses = {
+    DEPLOYED: "status-deployed",
+    DRAFT: "status-draft",
+    DISABLED: "status-disabled",
+  };
+
+  return (
+    <table className="tools-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Sector</th>
+          <th>Category</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {tools?.map((tool) => (
+          <tr key={tool.id}>
+            <td>
+              {tool.name}
+              <br />
+              {tool.description}
+            </td>
+            <td>
+              <span className="sector-badge">{tool.sectors}</span>
+            </td>
+            <td>{tool.category}</td>
+            <td>
+              <span
+                className={
+                 statusClasses[tool.status]
+                }
+              >
+                {tool.status}
+              </span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+export default ToolsTable;
