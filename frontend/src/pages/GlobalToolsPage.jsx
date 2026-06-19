@@ -20,6 +20,7 @@ function GlobalToolsPage() {
     name: "",
     description: "",
     category: "",
+    type: "",
     status: "DRAFT",
     sectors: [],
   });
@@ -176,6 +177,19 @@ function GlobalToolsPage() {
                   setNewTool({
                     ...newTool,
                     category: e.target.value,
+                  })
+                }
+              />
+            </div>
+            <div className="form-group">
+              <label>Type</label>
+              <input
+                placeholder="Enter type"
+                value={newTool.type || ""}
+                onChange={(e) =>
+                  setNewTool({
+                    ...newTool,
+                    type: e.target.value,
                   })
                 }
               />

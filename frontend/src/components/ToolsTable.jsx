@@ -12,6 +12,7 @@ function ToolsTable({ search, tools }) {
           <th>Name</th>
           <th>Sector</th>
           <th>Category</th>
+          <th>Type</th>
           <th>Status</th>
         </tr>
       </thead>
@@ -28,6 +29,7 @@ function ToolsTable({ search, tools }) {
               <span className="sector-badge">{tool.sectors}</span>
             </td>
             <td>{tool.category}</td>
+            <td>{tool.type}</td>
             <td>
               <span className={statusClasses[tool.status]}>{tool.status}</span>
             </td>
